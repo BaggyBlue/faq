@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaggyBlue | Frequently Asked Questions</title>
+    <!-- Favicon using the same info icon style -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%233b82f6'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z' /></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #f1f5f9;
+        }
+
+        .faq-gradient {
+            background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.15), transparent),
+                        radial-gradient(circle at bottom left, rgba(99, 102, 241, 0.15), transparent);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+        }
+
+        .accordion-item.active .accordion-content {
+            max-height: 500px;
+            padding-bottom: 1.5rem;
+        }
+
+        .accordion-item.active .icon-plus {
+            transform: rotate(45deg);
+        }
+
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body class="min-h-screen faq-gradient">
+
+    <!-- Header Section -->
+    <header class="py-16 px-4 text-center">
+        <div class="inline-block p-3 rounded-2xl bg-blue-600/20 mb-4 border border-blue-500/30">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-400">
+            BaggyBlue FAQ
+        </h1>
+        <p class="text-slate-400 max-w-2xl mx-auto text-lg">
+            Got questions about our free Discord bot hosting? We've got answers.
+        </p>
+    </header>
+
+    <!-- FAQ Section -->
+    <main class="max-w-3xl mx-auto px-4 pb-24">
+        <div id="faqList" class="space-y-4">
+            <div class="accordion-item glass-card rounded-2xl transition-all duration-300">
+                <button class="w-full flex items-center justify-between p-6 text-left focus:outline-none group">
+                    <span class="text-lg font-semibold text-slate-200 group-hover:text-blue-400 transition-colors">What is BaggyBlue?</span>
+                    <span class="icon-plus text-2xl text-slate-500 transition-transform duration-300">+</span>
+                </button>
+                <div class="accordion-content px-6 text-slate-400 leading-relaxed">
+                    BaggyBlue is a free Discord bot hosting platform that supports Node.js and Python bots, designed to help you keep your bots online.
+                </div>
+            </div>
+
+            <div class="accordion-item glass-card rounded-2xl transition-all duration-300">
+                <button class="w-full flex items-center justify-between p-6 text-left focus:outline-none group">
+                    <span class="text-lg font-semibold text-slate-200 group-hover:text-blue-400 transition-colors">Is BaggyBlue really free?</span>
+                    <span class="icon-plus text-2xl text-slate-500 transition-transform duration-300">+</span>
+                </button>
+                <div class="accordion-content px-6 text-slate-400 leading-relaxed">
+                    Yes! BaggyBlue is completely free to use. However, it runs thanks to donations, so consider supporting the project if you find it useful.
+                </div>
+            </div>
+
+            <div class="accordion-item glass-card rounded-2xl transition-all duration-300">
+                <button class="w-full flex items-center justify-between p-6 text-left focus:outline-none group">
+                    <span class="text-lg font-semibold text-slate-200 group-hover:text-blue-400 transition-colors">Does BaggyBlue guarantee 24/7 uptime?</span>
+                    <span class="icon-plus text-2xl text-slate-500 transition-transform duration-300">+</span>
+                </button>
+                <div class="accordion-content px-6 text-slate-400 leading-relaxed">
+                    No, we do not guarantee 24/7 uptime. While the platform aims to keep your bots running continuously, occasional downtime may occur.
+                </div>
+            </div>
+
+            <div class="accordion-item glass-card rounded-2xl transition-all duration-300">
+                <button class="w-full flex items-center justify-between p-6 text-left focus:outline-none group">
+                    <span class="text-lg font-semibold text-slate-200 group-hover:text-blue-400 transition-colors">Which programming languages are supported?</span>
+                    <span class="icon-plus text-2xl text-slate-500 transition-transform duration-300">+</span>
+                </button>
+                <div class="accordion-content px-6 text-slate-400 leading-relaxed">
+                    BaggyBlue supports bots built with Node.js and Python.
+                </div>
+            </div>
+
+            <div class="accordion-item glass-card rounded-2xl transition-all duration-300">
+                <button class="w-full flex items-center justify-between p-6 text-left focus:outline-none group">
+                    <span class="text-lg font-semibold text-slate-200 group-hover:text-blue-400 transition-colors">How do I deploy my bot?</span>
+                    <span class="icon-plus text-2xl text-slate-500 transition-transform duration-300">+</span>
+                </button>
+                <div class="accordion-content px-6 text-slate-400 leading-relaxed">
+                    Sign up, upload your bot files or link your GitHub repo, set up the environment, and launch your bot easily through our dashboard.
+                </div>
+            </div>
+
+            <div class="accordion-item glass-card rounded-2xl transition-all duration-300">
+                <button class="w-full flex items-center justify-between p-6 text-left focus:outline-none group">
+                    <span class="text-lg font-semibold text-slate-200 group-hover:text-blue-400 transition-colors">Can I host multiple bots?</span>
+                    <span class="icon-plus text-2xl text-slate-500 transition-transform duration-300">+</span>
+                </button>
+                <div class="accordion-content px-6 text-slate-400 leading-relaxed">
+                    No, we only offer hosting for one bot per user to ensure resources are available for everyone.
+                </div>
+            </div>
+
+            <div class="accordion-item glass-card rounded-2xl transition-all duration-300">
+                <button class="w-full flex items-center justify-between p-6 text-left focus:outline-none group">
+                    <span class="text-lg font-semibold text-slate-200 group-hover:text-blue-400 transition-colors">What are the resource limits?</span>
+                    <span class="icon-plus text-2xl text-slate-500 transition-transform duration-300">+</span>
+                </button>
+                <div class="accordion-content px-6 text-slate-400 leading-relaxed">
+                    Each bot gets 256 MB RAM, 10% CPU, and 1.5 GB disk space. Donors receive increased resources of 187+ MB RAM and additional benefits.
+                </div>
+            </div>
+
+            <div class="accordion-item glass-card rounded-2xl transition-all duration-300">
+                <button class="w-full flex items-center justify-between p-6 text-left focus:outline-none group">
+                    <span class="text-lg font-semibold text-slate-200 group-hover:text-blue-400 transition-colors">Can I use custom libraries?</span>
+                    <span class="icon-plus text-2xl text-slate-500 transition-transform duration-300">+</span>
+                </button>
+                <div class="accordion-content px-6 text-slate-400 leading-relaxed">
+                    Yes, you can install and use any required Node.js or Python packages using standard dependency files like package.json or requirements.txt.
+                </div>
+            </div>
+
+            <div class="accordion-item glass-card rounded-2xl transition-all duration-300">
+                <button class="w-full flex items-center justify-between p-6 text-left focus:outline-none group">
+                    <span class="text-lg font-semibold text-slate-200 group-hover:text-blue-400 transition-colors">How secure is my code?</span>
+                    <span class="icon-plus text-2xl text-slate-500 transition-transform duration-300">+</span>
+                </button>
+                <div class="accordion-content px-6 text-slate-400 leading-relaxed">
+                    Your bot’s code and data are kept private and secure within BaggyBlue’s isolated hosting environment.
+                </div>
+            </div>
+
+            <div class="accordion-item glass-card rounded-2xl transition-all duration-300">
+                <button class="w-full flex items-center justify-between p-6 text-left focus:outline-none group">
+                    <span class="text-lg font-semibold text-slate-200 group-hover:text-blue-400 transition-colors">How do I get support?</span>
+                    <span class="icon-plus text-2xl text-slate-500 transition-transform duration-300">+</span>
+                </button>
+                <div class="accordion-content px-6 text-slate-400 leading-relaxed">
+                    Support is available via BaggyBlue’s Discord server and email. Our community and staff are happy to help!
+                </div>
+            </div>
+
+            <div class="accordion-item glass-card rounded-2xl transition-all duration-300">
+                <button class="w-full flex items-center justify-between p-6 text-left focus:outline-none group">
+                    <span class="text-lg font-semibold text-slate-200 group-hover:text-blue-400 transition-colors">How can I support the project?</span>
+                    <span class="icon-plus text-2xl text-slate-500 transition-transform duration-300">+</span>
+                </button>
+                <div class="accordion-content px-6 text-slate-400 leading-relaxed">
+                    Since BaggyBlue is free and donation-supported, please consider donating to help keep the platform running and improve services. Every bit helps!
+                </div>
+            </div>
+        </div>
+
+        <!-- Support Box -->
+        <div class="mt-12 glass-card rounded-2xl p-8 border border-blue-500/20 text-center">
+            <h3 class="text-xl font-bold mb-2">Still have questions?</h3>
+            <p class="text-slate-400 mb-6">If you couldn't find what you're looking for, reach out directly.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://discord.gg/MpXyChY5yw" target="_blank" class="px-8 py-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-xl transition-all shadow-lg shadow-blue-500/20">
+                    Join Discord
+                </a>
+                <a href="mailto:support@baggyblue.fun" class="px-8 py-3 bg-slate-700 hover:bg-slate-600 text-white font-semibold rounded-xl transition-all">
+                    Email Support
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center py-12 border-t border-slate-800">
+        <p class="text-slate-500 text-sm">© 2023 BaggyBlue Hosting. Thank you for choosing us!</p>
+    </footer>
+
+    <script>
+        // Accordion Toggle Logic
+        document.querySelectorAll('.accordion-item button').forEach(button => {
+            button.addEventListener('click', () => {
+                const accordionItem = button.parentElement;
+                const isActive = accordionItem.classList.contains('active');
+
+                // Close all others
+                document.querySelectorAll('.accordion-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+
+                // Toggle current
+                if (!isActive) {
+                    accordionItem.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
